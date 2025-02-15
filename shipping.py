@@ -35,7 +35,7 @@ print(efficiency_per_engine)
 print(f'standard deviation : {np.std(efficiency_per_engine)}')
 
 # Visualization of performance by engine type
-plt.figure(figsize=(8, 4),facecolor='ivory')
+plt.figure(figsize=(8, 4))
 efficiency_per_engine.plot(kind='bar', color='lightsteelblue')
 plt.title('Performance by Engine Type')
 plt.xlabel('Engine Type')
@@ -52,7 +52,7 @@ print(efficiency_per_combination)
 print(f'standard deviation : {np.std(efficiency_per_combination)}')
 
 # Visualization of efficiency by ship type and route type
-plt.figure(figsize=(8, 4), facecolor='beige')
+plt.figure(figsize=(8, 4))
 efficiency_per_combination.plot(kind='bar', color='blue')
 plt.title('Efficiency by Ship Type and Route Type')
 plt.xlabel('Ship Type and Route Type')
