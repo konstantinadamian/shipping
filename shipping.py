@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
@@ -11,16 +10,12 @@ print(f'first five rows : {data.head()}')
 # Create a copy of the data
 copy_data = data.copy()
 
-print(f'information about the dataframe : {copy_data.info()}')
+print(copy_data.info())
 
 # Remove rows with all null values
 copy_data = copy_data.dropna(how='all')
 
 print(f'Number of duplicate rows: {copy_data.duplicated().sum()}')
-
-# Convert "Date" column to datetime format
-copy_data['Date'] = pd.to_datetime(copy_data['Date'], format='%d-%m-%Y')
-print(f'data type of the "Date" column : {copy_data['Date'].dtype}')
 
 copy_data[['Engine_Type', 'Ship_Type', 'Route_Type']] = copy_data[['Engine_Type', 'Ship_Type', 'Route_Type']].fillna('No Information')
 
